@@ -195,7 +195,7 @@ document.getElementById('sendBtn')?.addEventListener('click', () => {
   if (!body)    { setContactStatus('error', 'Please enter a message.'); return; }
 
   // Demo mode — don't actually open Gmail
-  setContactStatus('success', 'Demo Mode: Message would be sent to itsupport@rowecasaorganics.com');
+  setContactStatus('success', 'Demo Mode: Message would be sent to demo.itsupport@example.com');
 });
 
 document.getElementById('clearBtn')?.addEventListener('click', () => {

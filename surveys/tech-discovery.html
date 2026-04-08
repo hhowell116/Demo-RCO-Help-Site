@@ -293,16 +293,16 @@
     <div class="sidebar-footer">
       <a id="sidebarSheetLink"
          class="sidebar-sheet-link"
-         href="https://docs.google.com/spreadsheets/d/1qGufmR0KvRCU8OhQiZgf1R9CnvEvBBHogAcUh6XbOeM/edit?gid=72884401#gid=72884401"
+         href="#" onclick="event.preventDefault();alert('Demo Mode: Google Sheets links are disabled.')" 
          target="_blank">
         View All Software →
       </a>
       <div class="sidebar-divider" style="margin-bottom:0.75rem"></div>
       <button class="contact-btn" onclick="window.location.href='../index.html'">← Back to Portal</button>
       <button class="portal-email-btn"
-              title="Email itsupport@rowecasaorganics.com"
+              title="Email demo.itsupport@example.com"
               onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=itsupport%40rowecasaorganics.com','_blank')">
-        ✉️ itsupport@rowecasaorganics.com
+        ✉️ demo.itsupport@example.com
       </button>
     </div>
   </aside>
@@ -892,7 +892,7 @@ async function submitSurvey() {
     stat.className='contact-status success'; btn.textContent='Submitted ✓';
     setTimeout(function(){window.location.href='../index.html';},2500);
   } else {
-    stat.textContent='❌ Submission failed. Please try again or contact itsupport@rowecasaorganics.com.';
+    stat.textContent='❌ Submission failed. Please try again or contact demo.itsupport@example.com.';
     stat.className='contact-status error'; btn.textContent='Submit Survey →'; btn.disabled=false;
   }
 }

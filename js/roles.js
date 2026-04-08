@@ -7,11 +7,11 @@
 const LEVELS = { it_admin: 4, c_suite: 3, director: 2, manager: 1, staff: 0 };
 
 const MEMBERS = {
-  it_admin: ['demo@rowecasaorganics.com'],
-  c_suite: [],
-  director: [],
-  manager: [],
-  staff: [],
+  it_admin: ['demo.admin@example.com', 'demo.admin2@example.com'],
+  c_suite: ['demo.exec@example.com'],
+  director: ['demo.director@example.com', 'demo.director2@example.com'],
+  manager: ['demo.manager@example.com', 'demo.manager2@example.com', 'demo.manager3@example.com'],
+  staff: ['demo.staff@example.com', 'demo.staff2@example.com', 'demo.staff3@example.com', 'demo.staff4@example.com'],
 };
 
 // ── Content config (surveys / forms) ────────────────────────────────────────
