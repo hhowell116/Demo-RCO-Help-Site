@@ -6,7 +6,7 @@
 // ── Mock user (replaces Firebase Auth) ─────────────────────────────────────
 const currentUser = {
   displayName: 'Demo User',
-  email: 'demo@rowecasaorganics.com',
+  email: 'demo.admin@example.com',
   uid: 'demo-uid-001'
 };
 
@@ -122,14 +122,14 @@ const SAMPLE_SURVEYS = [
     title: 'RCO IT Software Inventory',
     dept: 'Marketing',
     url: 'surveys/tech-discovery.html',
-    userEmail: 'demo@rowecasaorganics.com',
+    userEmail: 'demo.admin@example.com',
     submittedAt: 'Mar 15, 2026, 2:30 PM'
   },
   {
     title: 'RCO IT Software Inventory',
     dept: 'Operations',
     url: 'surveys/tech-discovery.html',
-    userEmail: 'demo@rowecasaorganics.com',
+    userEmail: 'demo.admin@example.com',
     submittedAt: 'Feb 28, 2026, 10:15 AM'
   }
 ];
@@ -139,21 +139,21 @@ const SAMPLE_FORMS = [
     title: 'User Onboarding Request',
     dept: 'Human Resources',
     url: 'forms/onboarding.html',
-    userEmail: 'demo@rowecasaorganics.com',
+    userEmail: 'demo.admin@example.com',
     submittedAt: 'Mar 20, 2026, 9:45 AM'
   },
   {
     title: 'IT Equipment & Software Request',
     dept: 'Marketing',
     url: 'forms/equipment.html',
-    userEmail: 'demo@rowecasaorganics.com',
+    userEmail: 'demo.admin@example.com',
     submittedAt: 'Mar 10, 2026, 4:20 PM'
   },
   {
     title: 'RCO Rockstars',
     dept: 'Company-Wide',
     url: 'forms/rockstars.html',
-    userEmail: 'demo@rowecasaorganics.com',
+    userEmail: 'demo.admin@example.com',
     submittedAt: 'Mar 1, 2026, 11:00 AM'
   }
 ];

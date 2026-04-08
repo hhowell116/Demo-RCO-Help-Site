@@ -284,7 +284,7 @@
         <button class="contact-btn" data-section="contact">✉️ Contact Us</button>
         <button class="portal-email-btn"
                 title="Email demo.itsupport@example.com"
-                onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=itsupport%40rowecasaorganics.com','_blank')">
+                onclick="alert('Demo Mode: Contact is disabled.')">
           demo.itsupport@example.com
         </button>
       </div>
@@ -608,7 +608,7 @@
           <div class="contact-form-wrap">
             <div class="contact-field">
               <label for="contactFrom">Your Email Address</label>
-              <input type="email" id="contactFrom" placeholder="yourname@rowecasaorganics.com"/>
+              <input type="email" id="contactFrom" placeholder="you@example.com"/>
             </div>
             <div class="contact-field">
               <label for="contactTo">To</label>
@@ -645,7 +645,7 @@
         <div class="cg-section-title">✅ Preferred Methods — Each creates a ticket automatically</div>
         <div class="cg-methods">
           <div class="cg-method"><div class="cg-method-icon">✉️</div><div class="cg-method-text"><strong>Email</strong><span><a href="#" onclick="event.preventDefault();alert('Demo Mode: Contact is disabled.')">demo.itsupport@example.com</a></span></div></div>
-          <div class="cg-method"><div class="cg-method-icon">🌐</div><div class="cg-method-text"><strong>IT Portal</strong><span><a href="https://it.rowecasaorganics.com" target="_blank">it.rowecasaorganics.com</a></span></div></div>
+          <div class="cg-method"><div class="cg-method-icon">🌐</div><div class="cg-method-text"><strong>IT Portal</strong><span><a href="#" target="_blank">demo-it-portal.example.com</a></span></div></div>
           <div class="cg-method"><div class="cg-method-icon">💬</div><div class="cg-method-text"><strong>Slack</strong><span>#rco-it-support</span></div></div>
           <div class="cg-method"><div class="cg-method-icon">🖥️</div><div class="cg-method-text"><strong>System Tray Ticket Form</strong><span>Click the RCO IT Agent icon near the clock → select <em>IT Ticket Form</em> → fill in details → Save.</span></div></div>
         </div>
@@ -799,7 +799,7 @@
     import { getRole, getRoleLabel, canAccess, canViewSheets, canViewAllSubmissions, canViewResults, canViewRoles, loadPermissions, saveRolePermissions, roleHasAccess, getRoleContentIds, getAllItems, CONTENT_CONFIG, FEATURES_CONFIG, ROLE_NAMES, ROLE_LABELS, MEMBERS } from './js/roles.js';
 
     // Demo mode — no Firebase auth, use mock user
-    const email = 'demo@rowecasaorganics.com';
+    const email = 'demo.admin@example.com';
     const role  = getRole(email);
 
     const badge = document.getElementById('roleBadge');
@@ -929,7 +929,7 @@
         const count = r === 'staff' ? 'Everyone else' : `${members.length} member${members.length !== 1 ? 's' : ''}`;
         const list = members.length
           ? members.map(m => `<div style="font-size:0.78rem;color:var(--sb-muted);padding:0.2rem 0">${m}</div>`).join('')
-          : '<div style="font-size:0.78rem;color:var(--sb-muted);padding:0.2rem 0;font-style:italic">All @rowecasaorganics.com users not listed above</div>';
+          : '<div style="font-size:0.78rem;color:var(--sb-muted);padding:0.2rem 0;font-style:italic">All other employees not listed above</div>';
         return `<div style="margin-bottom:1.25rem">
           <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.4rem">
             <span style="font-size:0.85rem;font-weight:800;color:var(--sb-text)">${label}</span>
@@ -1149,32 +1149,22 @@
 
     const roleData = [
       { role: 'IT Admin', level: 4, color: '#1aaf72', bg: 'rgba(46,204,138,0.15)', members: [
-        'philip@rowecasaorganics.com', 'andrew.neidley@rowecasaorganics.com', 'kasey.tomasek@rowecasaorganics.com',
-        'hayden.howell@rowecasaorganics.com', 'chase.parrish@rowecasaorganics.com'
+        'demo.admin@example.com', 'demo.admin2@example.com', 'demo.admin3@example.com'
       ]},
       { role: 'Leadership', level: 3, color: 'var(--brand-brown)', bg: 'var(--brand-soft)', members: [
-        'mike@rowecasaorganics.com', 'jill@rowecasaorganics.com', 'alicia@rowecasaorganics.com',
-        'jacob@rowecasaorganics.com', 'chris.paulene@rowecasaorganics.com', 'michael@rowecasaorganics.com',
-        'grant@rowecasaorganics.com', 'ivan.gonzalez@rowecasaorganics.com', 'heidi.partlow@rowecasaorganics.com'
+        'demo.exec@example.com', 'demo.exec2@example.com', 'demo.exec3@example.com',
+        'demo.exec4@example.com', 'demo.exec5@example.com'
       ]},
       { role: 'Director', level: 2, color: 'var(--brand-brown)', bg: 'var(--brand-soft)', members: [
-        'carly@rowecasaorganics.com', 'kristen@rowecasaorganics.com', 'celina.bianco@rowecasaorganics.com',
-        'carissa@rowecasaorganics.com', 'courtneyd@rowecasaorganics.com', 'amanda@rowecasaorganics.com',
-        'lisa@rowecasaorganics.com', 'rachel.neidley@rowecasaorganics.com', 'reylia@rowecasaorganics.com',
-        'darcie.snyder@rowecasaorganics.com', 'laura@rowecasaorganics.com', 'krystle@rowecasaorganics.com',
-        'kevin.ludwig@rowecasaorganics.com', 'cammie.mccarty@rowecasaorganics.com'
+        'demo.director@example.com', 'demo.director2@example.com', 'demo.director3@example.com',
+        'demo.director4@example.com', 'demo.director5@example.com', 'demo.director6@example.com',
+        'demo.director7@example.com', 'demo.director8@example.com'
       ]},
       { role: 'Manager', level: 1, color: 'var(--brand-brown)', bg: 'var(--brand-soft)', members: [
-        'kelsea.berry@rowecasaorganics.com', 'lara@rowecasaorganics.com', 'cassandra.oberembt@rowecasaorganics.com',
-        'amanda.preddy@rowecasaorganics.com', 'brandi@rowecasaorganics.com', 'tonia@rowecasaorganics.com',
-        'mark@rowecasaorganics.com', 'alisha.wilson@rowecasaorganics.com', 'ashley.roberson@rowecasaorganics.com',
-        'kathy.sanford@rowecasaorganics.com', 'morgan.storey@rowecasaorganics.com', 'casey@rowecasaorganics.com',
-        'kaylee@rowecasaorganics.com', 'latasha.harris@rowecasaorganics.com', 'katie@rowecasaorganics.com',
-        'courtney@rowecasaorganics.com', 'treavor.ford@rowecasaorganics.com', 'lexie@rowecasaorganics.com',
-        'jessica@rowecasaorganics.com', 'jc@rowecasaorganics.com', 'keasha@rowecasaorganics.com',
-        'summer@rowecasaorganics.com', 'ryan.churchill@rowecasaorganics.com', 'krystle@rowecasaorganics.com',
-        'kacie@rowecasaorganics.com', 'leah.gideon@rowecasaorganics.com', 'emily.seaman@rowecasaorganics.com',
-        'graceh@rowecasaorganics.com', 'emma.parrish@rowecasaorganics.com'
+        'demo.manager@example.com', 'demo.manager2@example.com', 'demo.manager3@example.com',
+        'demo.manager4@example.com', 'demo.manager5@example.com', 'demo.manager6@example.com',
+        'demo.manager7@example.com', 'demo.manager8@example.com', 'demo.manager9@example.com',
+        'demo.manager10@example.com', 'demo.manager11@example.com', 'demo.manager12@example.com'
       ]},
       { role: 'Staff', level: 0, color: 'var(--sb-muted)', bg: 'var(--sidebar-bg)', members: [] },
     ];
@@ -1186,7 +1176,7 @@
         html += '<div style="background:var(--sidebar-bg);border:1.5px solid var(--sb-border);border-radius:12px;padding:1rem 1.25rem;margin-bottom:0.75rem">';
         html += '<div style="display:flex;align-items:center;gap:0.65rem;margin-bottom:0.65rem">';
         html += '<span style="font-size:0.68rem;font-weight:800;padding:0.22rem 0.65rem;border-radius:999px;letter-spacing:0.04em;text-transform:uppercase;background:' + r.bg + ';color:' + r.color + '">' + r.role + '</span>';
-        html += '<span style="font-size:0.75rem;color:var(--sb-muted);font-weight:600">Level ' + r.level + ' · ' + (r.members.length || 'All other @rowecasaorganics.com users') + (r.members.length ? ' member' + (r.members.length !== 1 ? 's' : '') : '') + '</span>';
+        html += '<span style="font-size:0.75rem;color:var(--sb-muted);font-weight:600">Level ' + r.level + ' · ' + (r.members.length || 'All other employees not listed above') + (r.members.length ? ' member' + (r.members.length !== 1 ? 's' : '') : '') + '</span>';
         html += '</div>';
         if (r.members.length) {
           html += '<div style="display:flex;flex-wrap:wrap;gap:0.35rem">';
@@ -1196,7 +1186,7 @@
           });
           html += '</div>';
         } else {
-          html += '<div style="font-size:0.78rem;color:var(--sb-muted);font-style:italic">Any @rowecasaorganics.com email not listed above. Can log in and contact IT, but cannot access surveys or forms.</div>';
+          html += '<div style="font-size:0.78rem;color:var(--sb-muted);font-style:italic">Any employee not listed above. Can log in and contact IT, but cannot access surveys or forms.</div>';
         }
         html += '</div>';
       });
